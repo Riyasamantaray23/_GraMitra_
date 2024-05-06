@@ -12,9 +12,6 @@ def classify(answer):
     return f"**{crop_name}** is the best crop for cultivation here."
 
 def main():
-    # Add logo to the top left corner
-    st.sidebar.image('logo.png', width=150, caption='')
-
     st.title("GraMitra (Crop Recommender)...")
     image = Image.open('cc.jpg')
     st.image(image)
@@ -25,6 +22,9 @@ def main():
     """
 
     st.markdown(html_temp, unsafe_allow_html=True)
+    
+    # Add logo to the top left corner
+    st.sidebar.image('logo.png', width=150, caption='')
     
     activities = ['Naive Bayes', 'Logistic Regression', 'Decision Tree', 'Random Forest']
     option = st.sidebar.selectbox("Which model would you like to use?", activities)
@@ -49,9 +49,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-

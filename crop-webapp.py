@@ -13,12 +13,24 @@ def classify(answer):
 
 def main():
     st.title("GraMitra (Crop Recommender)...")
+    
+    # Display your logo
+    st.sidebar.image('logo.png', width=150, caption='')
+    
     image = Image.open('cc.jpg')
     st.image(image)
     html_temp = """
     <style>
-    img[src*="github"] {
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
         display: none;
+    }
+    [data-testid="stToolbar"] {
+        visibility: hidden !important;
+    }
+    footer {
+        visibility: hidden !important;
     }
     </style>
     <div style="background-color:#85c532; padding:7px">
@@ -27,14 +39,6 @@ def main():
     """
 
     st.markdown(html_temp, unsafe_allow_html=True)
-    
-    # Add logo to the top left corner
-    st.sidebar.image('logo.png', width=150, caption='')
-    
-    # Show/hide sidebar based on button click
-    if st.button('Toggle Sidebar'):
-        st.sidebar.title("Sidebar Content")
-        # Add sidebar content here
     
     activities = ['Naive Bayes', 'Logistic Regression', 'Decision Tree', 'Random Forest']
     option = st.sidebar.selectbox("Which model would you like to use?", activities)
@@ -59,6 +63,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 
     

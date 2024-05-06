@@ -13,12 +13,17 @@ def classify(answer):
 
 def main():
     st.title("GraMitra (Crop Recommender)...")
+    
+    # Display your logo
+    st.sidebar.image('logo.png', width=150, caption='')
+    
     image = Image.open('cc.jpg')
     st.image(image)
     html_temp = """
     <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_,
+    .viewerBadge_link__1S137,
     .viewerBadge_text__1JaDK {
         display: none;
     }
@@ -53,4 +58,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

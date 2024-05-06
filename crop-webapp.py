@@ -16,15 +16,19 @@ def main():
     image = Image.open('cc.jpg')
     st.image(image)
     html_temp = """
+    <style>
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none;
+    }
+    </style>
     <div style="background-color:#85c532; padding:7px">
     <h2 style="color:#fff;text-align:center;font-size:20px;">Find the most suitable crop using GraMitra's crop recommender.</h2>
     </div>
     """
 
     st.markdown(html_temp, unsafe_allow_html=True)
-    
-    # Add logo to the top left corner
-    st.sidebar.image('logo.png', width=150, caption='')
     
     activities = ['Naive Bayes', 'Logistic Regression', 'Decision Tree', 'Random Forest']
     option = st.sidebar.selectbox("Which model would you like to use?", activities)
@@ -49,3 +53,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

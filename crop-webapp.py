@@ -23,7 +23,7 @@ def main():
     st.markdown(html_temp, unsafe_allow_html=True)
     
     # Add logo to the top left corner
-    st.sidebar.image('logo.png', width=200)
+    st.sidebar.image('logo.png', width=150 , caption='')
 
     activities=['Naive Bayes','Logistic Regression','Decision Tree','Random Forest']
     option=st.sidebar.selectbox("Which model would you like to use?",activities)

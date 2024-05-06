@@ -8,8 +8,7 @@ NaiveBayes_model = pickle.load(open('NaiveBayes_model.pkl', 'rb'))
 RF_model = pickle.load(open('RF_model.pkl', 'rb'))
 
 def classify(answer):
-    crop_name = answer[0].upper()
-    return f"**{crop_name}** is the best crop for cultivation here."
+    return "<span style='font-size:24px; font-weight:bold;'>" + answer[0].upper() + "</span> <span style='font-size:18px;'>is the best crop for cultivation here.</span>"
 
 def main():
     st.title("GraMitra (Crop Recommender)...")
@@ -49,6 +48,9 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+    
+ 
 
 
     

@@ -9,7 +9,7 @@ RF_model = pickle.load(open('RF_model.pkl', 'rb'))
 
 def classify(answer):
     crop_name = answer[0].upper()
-    return f"**{crop_name}** is the best crop for cultivation here."
+    return f"<span style='font-size:30px;'>**{crop_name}**</span> is the best crop to grow here."
 
 def main():
     st.title("GraMitra (Crop Recommender)...")

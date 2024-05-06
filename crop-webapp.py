@@ -17,9 +17,8 @@ def main():
     st.image(image)
     html_temp = """
     <style>
-    .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_,
-    .viewerBadge_link__1S137,
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
     .viewerBadge_text__1JaDK {
         display: none;
     }
@@ -57,4 +56,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+    
 

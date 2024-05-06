@@ -26,6 +26,12 @@ def main():
     .viewerBadge_text__1JaDK {
         display: none;
     }
+    [data-testid="stToolbar"] {
+        visibility: hidden !important;
+    }
+    footer {
+        visibility: hidden !important;
+    }
     </style>
     <div style="background-color:#85c532; padding:7px">
     <h2 style="color:#fff;text-align:center;font-size:20px;">Find the most suitable crop using GraMitra's crop recommender.</h2>
@@ -57,3 +63,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

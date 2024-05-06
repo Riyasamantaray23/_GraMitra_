@@ -16,6 +16,14 @@ def main():
     image = Image.open('cc.jpg')
     st.image(image)
     html_temp = """
+    <style>
+    .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_,
+    .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none;
+    }
+    </style>
     <div style="background-color:#85c532; padding:7px">
     <h2 style="color:#fff;text-align:center;font-size:20px;">Find the most suitable crop using GraMitra's crop recommender.</h2>
     </div>

@@ -31,6 +31,11 @@ def main():
     # Add logo to the top left corner
     st.sidebar.image('logo.png', width=150, caption='')
     
+    # Show/hide sidebar based on button click
+    if st.button('Toggle Sidebar'):
+        st.sidebar.title("Sidebar Content")
+        # Add sidebar content here
+    
     activities = ['Naive Bayes', 'Logistic Regression', 'Decision Tree', 'Random Forest']
     option = st.sidebar.selectbox("Which model would you like to use?", activities)
     st.subheader(option)
@@ -54,6 +59,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
     
 
